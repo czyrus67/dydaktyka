@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 6 - Michał Starkowicz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .highlight {
+            font-weight: bold;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Zadanie 6 - Michał Starkowicz klasa 3K</h1>
+    <button onclick="showTheory()">Starkowicz-Zadanie6</button>
+
+    <div id="theory" style="display: none; margin-top: 20px;">
+        <p>
+            <span class="highlight">1) Rodzaje okienek:</span><br>
+            <span class="underline">Okienko alert</span> – wyświetlające okienko dialogowe z informacją i przyciskiem OK.<br>
+            <span class="underline">Okienko prompt</span> – generuje okno, w którym użytkownik może wpisać wartość, zwracaną następnie do programu.<br>
+            <span class="underline">Okienko confirm</span> – służy do tego, aby użytkownik coś potwierdził (stąd nazwa confirm).
+        </p>
+        <p>
+            <span class="highlight">2) Konwersji liczb:</span><br>
+            Wczytanie zmiennej z użyciem prompt wykonywane jest jako ciąg znaków, dlatego konieczna jest konwersja z ciągu znaków na wartości liczbowe, aby wykonywać obliczenia.<br>
+            <span class="underline">parseFloat(zmienna)</span> – konwersja zmiennej do typu float.<br>
+            <span class="underline">parseInt(zmienna)</span> – konwersja zmiennej do typu int (liczbowego).<br>
+            <span class="underline">toString(zmienna)</span> – konwersja zmiennej do typu łańcuchowego.
+        </p>
+        <p>
+            <span class="highlight">3) Przy nadawaniu nazw zmiennym należy przestrzegać pewnych zasad:</span><br>
+            <span class="underline">1.</span> Nazwa zmiennej musi się zaczynać od litery, znaku "$" lub "_", może zawierać tylko litery (bez polskich znaków), cyfry oraz "$" i "_".<br>
+            <span class="underline">2.</span> Wielkość liter ma znaczenie (np. <code>Rekord</code> i <code>rekord</code> to dwie różne zmienne).<br>
+            <span class="underline">3.</span> Należy unikać używania słów kluczowych JavaScript jako nazw zmiennych.
+        </p>
+        <p>
+            <span class="highlight">4) Typy zmiennych w JavaScript:</span><br>
+            W JavaScript typy zmiennych są definiowane w trakcie ich przypisywania.<br>
+            <span class="underline">Number</span> – typ liczbowy (całkowity i zmiennoprzecinkowy).<br>
+            <span class="underline">String</span> – typ tekstowy.<br>
+            <span class="underline">Boolean</span> – typ logiczny.<br>
+            <span class="underline">Null</span> – pusta zawartość.<br>
+            <span class="underline">Undefined</span> – typ niezidentyfikowany.<br>
+            <span class="underline">Object</span> – obiekt.
+        </p>
+    </div>
+
+    <script>
+        function showTheory() {
+            const theory = document.getElementById("theory");
+            theory.style.display = theory.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</body>
+</html>

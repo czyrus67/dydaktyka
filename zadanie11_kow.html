@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Starkowicz - Zadanie 11</title>
+    <script type="text/javascript">
+        function calculateSeconds() {
+            // Wczytanie dni z inputów
+            var D1 = parseInt(document.getElementById("D1").value);
+            var D2 = parseInt(document.getElementById("D2").value);
+            
+            // Sprawdzenie, czy dane są prawidłowe
+            if (D1 < 1 || D1 > 31 || D2 < 1 || D2 > 31 || D1 < D2) {
+                alert("Niepoprawne dane. Upewnij się, że 1 <= D1, D2 <= 31 i D1 >= D2.");
+                return;
+            }
+
+            // Obliczenie różnicy dni
+            var difference = D1 - D2;
+
+            // Obliczenie sekund
+            var seconds = difference * 24 * 60 * 60;
+            
+            // Wyświetlenie wyniku
+            document.getElementById("result").innerHTML = "Ilość sekund między dniem " + D1 + " a dniem " + D2 + " wynosi: " + seconds + " sekund.";
+        }
+    </script>
+</head>
+<body>
+    <h1 style="font-size: 30px; color: green;">Zadanie 11: Obliczanie sekund</h1>
+    <label for="D1">D1 (dzień 1):</label>
+    <input type="number" id="D1" min="1" max="31"><br><br>
+    <label for="D2">D2 (dzień 2):</label>
+    <input type="number" id="D2" min="1" max="31"><br><br>
+    
+    <input type="button" value="Oblicz sekundy" onclick="calculateSeconds()">
+    <p id="result" style="font-size: 30px;"></p>
+</body>
+</html>

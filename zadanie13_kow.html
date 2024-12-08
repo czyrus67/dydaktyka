@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Rozkład Ułamka Egipskiego - Starkowicz</title>
+    <script type="text/javascript">
+        function rozklad_ulamka() {
+            var m = prompt("Podaj wartość m (m > 0):", "");
+            if (m > 0) {
+                var licznik1 = m + 1;
+                var licznik2 = m * (m + 1);
+                document.write("Rozkład ułamka 1/" + m + " na ułamki egipskie: 1/" + licznik1 + " + 1/" + licznik2);
+            } else {
+                alert("Wartość m musi być liczbą większą od 0.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Rozkład Ułamka Egipskiego na Dwa Ułamki Egipskie</h1>
+    <input type="button" value="Zadanie 13 - Starkowicz" onclick="rozklad_ulamka()">
+</body>
+</html>

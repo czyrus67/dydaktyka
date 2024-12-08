@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 16 KOD - Starkowicz Michał</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        pre {
+            font-size: 18px;
+            color: #000080;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="granatowy">Sterowanie wydrukami - KOD</h1>
+    <p>Oto kod JavaScript, który wykonuje obliczenia według podanego wzoru:</p>
+    <pre>
+        <code>
+            var A = prompt("Podaj pierwszą liczbę A=");
+            var B = prompt("Podaj drugą liczbę B=");
+
+            var wynik = Math.pow(A, 3) + 3 * Math.pow(A, 2) * B + 3 * A * Math.pow(B, 2) + Math.pow(B, 3);
+
+            document.write("&lt;p class='granatowy'&gt;Wczytane liczby: A=" + A + " B=" + B + "&lt;/p&gt;");
+            document.write("&lt;p class='full-width'&gt;(" + A + " + " + B + ")&lt;sup&gt;3&lt;/sup&gt; = " + A + "&lt;sup&gt;3&lt;/sup&gt; + 3(" + A + "&lt;sup&gt;2&lt;/sup&gt;)(" + B + ") + 3(" + A + ")(" + B + "&lt;sup&gt;2&lt;/sup&gt;) + " + B + "&lt;sup&gt;3&lt;/sup&gt; = " + wynik + "&lt;/p&gt;");
+        </code>
+    </pre>
+    <p>Ten kod prosi użytkownika o podanie dwóch liczb, a następnie wykonuje obliczenia na podstawie wzoru matematycznego i wyświetla wynik na stronie.</p>
+</body>
+</html>

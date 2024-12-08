@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 9 - Michał Starkowicz</title>
+    <script type="text/javascript">
+        // Funkcja wyświetlająca Prompt Box
+        function show_prompt() {
+            var name = prompt("Napisz imię", "Imię Nazwisko");
+            if (name != null && name != "") {
+                document.write("Witaj " + name + "! Jak się masz?");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Zadanie 9 - Michał Starkowicz, klasa 3K</h1>
+    
+    <!-- Przycisk uruchamiający Prompt Box -->
+    <input type="button" onclick="show_prompt()" value="Pokaż Prompt Box" />
+</body>
+</html>
