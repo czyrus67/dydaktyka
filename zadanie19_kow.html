@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Obliczanie pola i obwodu kwadratu</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <script type="text/javascript">
+        function pole_kowalski() {
+            var a_kow = parseFloat(document.getElementById('dlugosc').value);
+            var b_kow = a_kow * a_kow;
+            document.getElementById("nazwa").innerHTML = "Pole kwadratu= " + b_kow.toFixed(2) + " cm²";
+        }
+
+        function obwod_kowalski() {
+            var a_kow = parseFloat(document.getElementById('dlugosc').value);
+            var b_kow = 4 * a_kow;
+            document.getElementById("nazwa").innerHTML = "Obwód kwadratu= " + b_kow.toFixed(2) + " cm";
+        }
+    </script>
+
+    <h1>Wszystko o KWADRACIE</h1><br><br>
+    Podaj długość boku: <input type="text" id="dlugosc" value=""> cm<br><br><br>
+    <input type="button" name="pole" value="Oblicz pole" onclick="pole_kowalski()"><br><br>
+    <input type="button" name="obwod" value="Oblicz obwód" onclick="obwod_kowalski()"><br><br>
+    <div style="color:red;font-size:50px;" id="nazwa"></div>
+</body>
+</html>
