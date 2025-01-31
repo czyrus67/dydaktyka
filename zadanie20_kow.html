@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Obliczanie długości boków trójkąta</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <script type="text/javascript">
+        function AB_kry() {
+            var xa_kow = parseFloat(document.getElementById('xa').value);
+            var ya_kow = parseFloat(document.getElementById('ya').value);
+            var xb_kow = parseFloat(document.getElementById('xb').value);
+            var yb_kow = parseFloat(document.getElementById('yb').value);
+            var ab = Math.sqrt(Math.pow(xb_kow - xa_kow, 2) + Math.pow(yb_kow - ya_kow, 2));
+            document.getElementById("wynik").innerHTML = "Długość AB = " + ab.toFixed(2) + " cm";
+        }
+
+        function BC_kry() {
+            var xb_kow = parseFloat(document.getElementById('xb').value);
+            var yb_kow = parseFloat(document.getElementById('yb').value);
+            var xc_kow = parseFloat(document.getElementById('xc').value);
+            var yc_kow = parseFloat(document.getElementById('yc').value);
+            var bc = Math.sqrt(Math.pow(xc_kow - xb_kow, 2) + Math.pow(yc_kow - yb_kow, 2));
+            document.getElementById("wynik").innerHTML = "Długość BC = " + bc.toFixed(2) + " cm";
+        }
+
+        function AC_kry() {
+            var xa_kow = parseFloat(document.getElementById('xa').value);
+            var ya_kow = parseFloat(document.getElementById('ya').value);
+            var xc_kow = parseFloat(document.getElementById('xc').value);
+            var yc_kow = parseFloat(document.getElementById('yc').value);
+            var ac = Math.sqrt(Math.pow(xc_kow - xa_kow, 2) + Math.pow(yc_kow - ya_kow, 2));
+            document.getElementById("wynik").innerHTML = "Długość AC = " + ac.toFixed(2) + " cm";
+        }
+    </script>
+
+    <h1>Obliczanie długości boków trójkąta</h1><br><br>
+    
+    Podaj współrzędne punktów:<br><br>
+
+    Punkt A: X: <input type="text" id="xa" value=""> Y: <input type="text" id="ya" value=""><br><br>
+    Punkt B: X: <input type="text" id="xb" value=""> Y: <input type="text" id="yb" value=""><br><br>
+    Punkt C: X: <input type="text" id="xc" value=""> Y: <input type="text" id="yc" value=""><br><br>
+
+    <input type="button" value="Oblicz AB" onclick="AB_kry()"><br><br>
+    <input type="button" value="Oblicz BC" onclick="BC_kry()"><br><br>
+    <input type="button" value="Oblicz AC" onclick="AC_kry()"><br><br>
+
+    <div style="color:red;font-size:30px;" id="wynik"></div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Obliczanie V i Pc walca</title>
+    <script language="JavaScript">
+        function V_kow(r, h) {
+            var r_liczba = parseFloat(r);
+            var h_liczba = parseFloat(h);
+            var V_wynik = Math.PI * Math.pow(r_liczba, 2) * h_liczba;
+            document.getElementsByName('obj')[0].value = V_wynik.toFixed(2); // Wyświetlenie w polu formularza
+            alert("V = " + V_wynik.toFixed(2) + " cm³"); // Okienko alert
+            document.getElementById("pokaz1").innerHTML = "V = " + V_wynik.toFixed(2) + " cm³"; // Wypisanie w tabeli
+        }
+
+        function Pc_kow(r, h) {
+            var r_liczba = parseFloat(r);
+            var h_liczba = parseFloat(h);
+            var Pc_wynik = 2 * Math.PI * Math.pow(r_liczba, 2) + 2 * Math.PI * r_liczba * h_liczba;
+            document.getElementsByName('pole')[0].value = Pc_wynik.toFixed(2);
+            alert("Pc = " + Pc_wynik.toFixed(2) + " cm²");
+            document.getElementById("pokaz2").innerHTML = "Pc = " + Pc_wynik.toFixed(2) + " cm²";
+        }
+    </script>
+</head>
+<body>
+    <h1>Obliczanie objętości i pola powierzchni walca</h1>
+    <br> 
+    <form name="formularz" action="..." onsubmit="V_kow(this.promien.value,this.wysokosc.value);
+    Pc_kow(this.promien.value,this.wysokosc.value); return false">
+        Podaj r = <input size="6" name="promien">
+        Podaj h = <input size="6" name="wysokosc">
+        <br> <br>
+        <input type="submit" value="Oblicz">
+        <br> <br>
+        V = <input size="6" name="obj">
+        Pc = <input size="6" name="pole">
+    </form>
+
+    <table>
+        <tr id="pokaz1"></tr>
+        <tr id="pokaz2"></tr>
+    </table>
+</body>
+</html>
