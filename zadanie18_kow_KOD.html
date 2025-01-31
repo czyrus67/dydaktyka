@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod źródłowy - Funkcje w JS</title>
+</head>
+<body>
+    <pre style="font-size: 20px;">
+    var a = parseFloat(prompt("Podaj liczbę a:", ""));
+    var b = parseFloat(prompt("Podaj liczbę b:", ""));
+
+    function suma_sta(a, b) {
+        return a + b;
+    }
+
+    function odejmowanie_sta(a, b) {
+        return a - b;
+    }
+
+    function mnozenie_sta(a, b) {
+        return a * b;
+    }
+
+    function od_kwadratu_sta(a, b) {
+        return "a^2 = " + (a ** 2) + ", b^2 = " + (b ** 2);
+    }
+
+    function reszta_z_dzielenia_a_przez_b_sta(a, b) {
+        return a % b;
+    }
+
+    document.write("Suma: " + suma_sta(a, b) + "<br>");
+    document.write("Różnica: " + odejmowanie_sta(a, b) + "<br>");
+    document.write("Iloczyn: " + mnozenie_sta(a, b) + "<br>");
+    document.write("Kwadraty: " + od_kwadratu_sta(a, b) + "<br>");
+    document.write("Reszta z dzielenia a przez b: " + reszta_z_dzielenia_a_przez_b_sta(a, b) + "<br>");
+    </pre>
+</body>
+</html>
