@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod - Zadanie 17</title>
+    <style>
+        .wyroznienieCzerwone { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Przykład działania metod i właściwości</h1>
+
+    <div id="tekst">Przykładowy tekst</div>
+    <button onclick="zmienTekst()">Zmień tekst</button>
+
+    <script>
+        function zmienTekst() {
+            let element = document.getElementById("tekst");
+            element.innerHTML = "<b>Nowa zawartość</b>";
+            element.className = "wyroznienieCzerwone";
+        }
+    </script>
+</body>
+</html>
