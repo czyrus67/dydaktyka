@@ -9,7 +9,13 @@
 
 <h2>Obiekty w JavaScript</h2>
 
+<div id="output"></div>
+
 <script>
+function writeOutput(text) {
+    document.getElementById("output").innerHTML += text + "<br>";
+}
+
 // Definiowanie obiektu z właściwościami i metodami
 var auto = {
     marka: "Opel Omega",
@@ -17,8 +23,8 @@ var auto = {
     cena: 25000
 };
 
-console.log(auto.marka); // Opel Omega
-console.log(auto["cena"]); // 25000
+writeOutput("Marka auta: " + auto.marka);
+writeOutput("Cena auta: " + auto["cena"]);
 
 // Konstruktor obiektu
 function Klient(nazwisko, imie, zawod) {
@@ -26,7 +32,7 @@ function Klient(nazwisko, imie, zawod) {
     this.imie = imie;
     this.zawod = zawod;
     this.wypisz = function () {
-        console.log(this.nazwisko + " " + this.imie);
+        writeOutput("Klient: " + this.nazwisko + " " + this.imie);
     };
 }
 
@@ -37,10 +43,9 @@ osoba1.wypisz();
 
 // Użycie prototype do dodania metody do wszystkich obiektów Klient
 Klient.prototype.piszDane = function () {
-    console.log(this.nazwisko + " " + this.imie);
+    writeOutput("Klient (prototype): " + this.nazwisko + " " + this.imie);
 };
 
-Klient.prototype.zawod = "kierowca";
 osoba1.piszDane();
 
 // Definiowanie i użycie obiektu
@@ -48,26 +53,26 @@ var myObject = {
     name: "Marcin",
     height: 184,
     print: function () {
-        console.log(this.name);
+        writeOutput("Obiekt: " + this.name);
     }
 };
 
 myObject.print();
-console.log(myObject.height);
+writeOutput("Wzrost: " + myObject.height);
 
 // Tworzenie klasy obiektu i tworzenie instancji
 function SuperObjectClass(width, height) {
     this.width = width;
     this.height = height;
     this.print = function () {
-        console.log(this.width + 'x' + this.height);
+        writeOutput("Obiekt ma wymiary: " + this.width + "x" + this.height);
     };
 }
 
 var myObject1 = new SuperObjectClass(200, 100);
 var myObject2 = new SuperObjectClass(300, 200);
-myObject1.print(); // 200x100
-myObject2.print(); // 300x200
+myObject1.print();
+myObject2.print();
 
 // Tworzenie obiektu zawierającego inny obiekt
 function Osoba(imie, nazwisko) {
@@ -84,8 +89,8 @@ function Auto(marka, rok, cena, wlasciciel) {
 
 var posiadacz = new Osoba("Jan", "Kowalski");
 var bryka = new Auto("Ferrari", 2003, 200000, posiadacz);
-console.log("Marka: " + bryka.marka + " Rocznik: " + bryka.rok + " Cena: " + bryka.cena);
-console.log("Właściciel: " + bryka.wlasciciel.imie + " " + bryka.wlasciciel.nazwisko);
+writeOutput("Marka: " + bryka.marka + " Rocznik: " + bryka.rok + " Cena: " + bryka.cena);
+writeOutput("Właściciel: " + bryka.wlasciciel.imie + " " + bryka.wlasciciel.nazwisko);
 </script>
 
 </body>
