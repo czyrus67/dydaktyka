@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 30 - Telefon</title>
+    <script>
+        var Telefon = {
+            siec: "Orange",
+            model: "iPhone 13",
+            system: "iOS",
+            telefon_wyswietl_Starkowicz: function() {
+                document.getElementById("wynik").innerHTML =
+                    "Obiekt: Telefon<br>" +
+                    "Pola:<br>" +
+                    "- Sieć: " + this.siec + "<br>" +
+                    "- Model: " + this.model + "<br>" +
+                    "- System: " + this.system + "<br>" +
+                    "Metoda: telefon_wyswietl_Starkowicz";
+            }
+        };
+    </script>
+</head>
+<body>
+    <h2>Zadanie 30 - Obiekt Telefon</h2>
+    <button onclick="Telefon.telefon_wyswietl_Starkowicz()">Pokaż dane obiektu</button>
+    <button onclick="document.getElementById('kod').style.display='block'">Pokaż kod</button>
+    <div id="wynik" style="margin-top: 20px; font-weight: bold;"></div>
+    <pre id="kod" style="display: none; background-color: #f4f4f4; padding: 10px; border: 1px solid #ccc;">
+        var Telefon = {
+            siec: "Orange",
+            model: "iPhone 13",
+            system: "iOS",
+            telefon_wyswietl_Starkowicz: function() {
+                document.getElementById("wynik").innerHTML =
+                    "Obiekt: Telefon<br>" +
+                    "Pola:<br>" +
+                    "- Sieć: " + this.siec + "<br>" +
+                    "- Model: " + this.model + "<br>" +
+                    "- System: " + this.system + "<br>" +
+                    "Metoda: telefon_wyswietl_Starkowicz";
+            }
+        };
+    </pre>
+</body>
+</html>
