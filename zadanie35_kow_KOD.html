@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 35 - Kod źródłowy</title>
+</head>
+<body>
+    <h1>Kod źródłowy Zadania 35</h1>
+    <pre style="background-color: #f4f4f4; padding: 10px; border-radius: 5px;">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Zadanie 35 - Wykonanie&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div style="color:red; font-size:50px;"&gt;
+    &lt;script language="JavaScript"&gt;
+        // Wczytanie liczby od użytkownika
+        var kow = prompt("Podaj liczbę:", "");
+        var a_dana_kow = parseFloat(kow);
+
+        // Wyświetlenie wczytanej liczby
+        document.write("Wczytana liczba: " + a_dana_kow + "&lt;br&gt;");
+
+        // Sprawdzenie znaku liczby
+        if (a_dana_kow > 0) {
+            document.write("Wczytana liczba jest większa od 0.&lt;br&gt;");
+        } else if (a_dana_kow === 0) {
+            document.write("Wczytana liczba jest równa 0.&lt;br&gt;");
+        } else {
+            document.write("Wczytana liczba jest mniejsza od 0.&lt;br&gt;");
+        }
+    &lt;/script&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+</body>
+</html>
