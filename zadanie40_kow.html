@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michał Starkowicz - Klasa 3K</title>
+    <style>
+        h1 { text-transform: uppercase; }
+        .wynik { margin-top: 20px; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <h1>Michał Starkowicz - Klasa 3K</h1>
+
+    <!-- Formularz do wprowadzania liczb -->
+    <label for="a">Podaj pierwszą liczbę:</label> 
+    <input type="number" id="a">
+    <br><br>
+    <label for="b">Podaj drugą liczbę:</label> 
+    <input type="number" id="b">
+    <br><br>
+
+    <!-- Przyciski do działań -->
+    <input type="button" value="DODAWANIE" onclick="suma_sta()">
+    <input type="button" value="ODEJMOWANIE" onclick="roznica_sta()">
+    <input type="button" value="MNOŻENIE" onclick="iloczyn_sta()">
+    <input type="button" value="DZIELENIE" onclick="iloraz_sta()">
+
+    <!-- Przycisk TEORIA -->
+    <input type="button" value="TEORIA-Starkowicz" onclick="teoria_sta()">
+
+    <!-- Wyświetlanie wyniku -->
+    <div id="wynik" class="wynik"></div>
+
+    <script>
+        // Funkcja dodawania
+        function suma_sta() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+
+            if (a == "" || b == "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                a = parseFloat(a);
+                b = parseFloat(b);
+                var suma = a + b;
+                document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + suma.toFixed(2);
+            }
+        }
+
+        // Funkcja odejmowania
+        function roznica_sta() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+
+            if (a == "" || b == "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                a = parseFloat(a);
+                b = parseFloat(b);
+                var roznica = a - b;
+                document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + roznica.toFixed(2);
+            }
+        }
+
+        // Funkcja mnożenia
+        function iloczyn_sta() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+
+            if (a == "" || b == "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                a = parseFloat(a);
+                b = parseFloat(b);
+                var iloczyn = a * b;
+                document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloczyn.toFixed(2);
+            }
+        }
+
+        // Funkcja dzielenia
+        function iloraz_sta() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+
+            if (a == "" || b == "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                a = parseFloat(a);
+                b = parseFloat(b);
+
+                if (b == 0) {
+                    document.getElementById("wynik").innerHTML = "Nie wolno dzielić przez zero.";
+                } else {
+                    var iloraz = a / b;
+                    document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloraz.toFixed(2);
+                }
+            }
+        }
+
+        // Funkcja TEORIA
+        function teoria_sta() {
+            var teoria =
+                "<font color='green' size='4'>Pierwsza linia teorii</font><br>" +
+                "<font color='red' size='4'>&lt;</font>"+"<font color='red' size='4>label for=&quot;a&quot;&gt;</font>" +
+                "<font color='red' size='4'>Podaj pierwszą liczbę:</font><br>" +
+                "<font color='green' size='4'>Wytłumaczenie:</font><br>" +
+                "<font color='red' size='4'>Tworzy etykietę dla pola formularza z identyfikatorem 'a'.</font><br>" +
+                "<font color='green' size='4'>Druga linia teorii</font><br>" +
+                "<font color='red' size='4'>&lt;input type=&quot;button&quot; value=&quot;DODAWANIE&quot; onclick=&quot;suma_sta()&quot;&gt;</font><br>" +
+                "<font color='green' size='4'>Wytłumaczenie:</font><br>" +
+                "<font color='red' size='4'>Tworzy przycisk, który wywołuje funkcję suma_sta().</font><br>";
+
+            document.getElementById("wynik").innerHTML = teoria;
+        }
+    </script>
+</body>
+</html>
