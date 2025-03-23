@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 39 - Kod źródłowy</title>
+</head>
+<body>
+    <h1>Kod źródłowy Zadania 39</h1>
+    <pre style="background-color: #f4f4f4; padding: 10px; border-radius: 5px;">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pl&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Zadanie 39 - Wykonanie&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;h1 style=&quot;color: green;&quot;&gt;MENU&lt;/h1&gt;
+    &lt;p style=&quot;color: red;&quot;&gt;1 - CZERWONY&lt;/p&gt;
+    &lt;p style=&quot;color: blue;&quot;&gt;2 - NIEBIESKI&lt;/p&gt;
+
+    &lt;!-- Przycisk do wczytania danych --&gt;
+    &lt;input type=&quot;button&quot; name=&quot;nazwisko_ucznia&quot; value=&quot;Oblicz&quot; onclick=&quot;fun_kow()&quot; /&gt;
+
+    &lt;script language=&quot;JavaScript&quot;&gt;
+        function fun_kow() {
+            var opcja_dana_kow = prompt(&quot;Podaj kolor (1, 'czerwony', 2 lub 'niebieski'):&quot;, &quot;&quot;).toLowerCase();
+
+            if (opcja_dana_kow == &quot;1&quot; || opcja_dana_kow == &quot;czerwony&quot;) {
+                document.write('&lt;h1 style=&quot;color: red; font-size: 7;&quot;&gt;Wczytałeś kolor czerwony&lt;/h1&gt;&lt;br /&gt;');
+            } else if (opcja_dana_kow == &quot;2&quot; || opcja_dana_kow == &quot;niebieski&quot;) {
+                document.write('&lt;h6 style=&quot;color: blue; font-size: 1;&quot;&gt;Wczytałeś kolor niebieski&lt;/h6&gt;&lt;br /&gt;');
+            } else {
+                document.write('&lt;p style=&quot;color: black; font-size: 3;&quot;&gt;Niepoprawny wybór!&lt;/p&gt;');
+            }
+        }
+    &lt;/script&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+</body>
+</html>
