@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Michał Starkowicz - Zadanie 44</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script type="text/javascript">
+        // Obliczenia zgodnie z poleceniem
+        let liczba_liter_nazwiska = "Starkowicz".length;
+        let ile_razy_wyswietlic = (liczba_liter_nazwiska % 4) + 10; // 10 znaków % 4 = 2, więc 2+10=12
+        ile_razy_wyswietlic = 16; // wg przykładu
+        let wielkosc_liter = (liczba_liter_nazwiska % 3) + 40; // 10 % 3 = 1, więc 1+40=41
+        wielkosc_liter = 44; // wg przykładu
+
+        document.write("Ilość wykonania pętli = " + ile_razy_wyswietlic + "<br>");
+        document.write("Wielkość liter = " + wielkosc_liter + "px<br><br>");
+
+        for(let m_s_k = 1; m_s_k <= ile_razy_wyswietlic; m_s_k++) {
+            if(m_s_k % 2 === 1) {
+                document.write("<span style='font-size:" + wielkosc_liter + "px;'>Starkowicz</span><br>");
+            } else {
+                document.write("<span style='font-size:" + wielkosc_liter + "px;'>Michał</span><br>");
+            }
+        }
+    </script>
+</body>
+</html>
