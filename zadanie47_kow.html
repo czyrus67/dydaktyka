@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Michał Starkowicz - Zadanie 47</title>
+</head>
+<body>
+    <div style="color:red;font-size:32px;">
+        <script type="text/javascript">
+            var a_kow, b_kow, c_kow;
+            do {
+                a_kow = parseFloat(prompt("Podaj długość boku a (>0):", ""));
+                b_kow = parseFloat(prompt("Podaj długość boku b (>0):", ""));
+                c_kow = parseFloat(prompt("Podaj długość boku c (>0):", ""));
+            } while (
+                !(a_kow > 0 && b_kow > 0 && c_kow > 0 &&
+                  a_kow + b_kow > c_kow &&
+                  a_kow + c_kow > b_kow &&
+                  b_kow + c_kow > a_kow)
+            );
+            document.write("Podane boki tworzą trójkąt:<br>");
+            document.write("a = " + a_kow + "<br>");
+            document.write("b = " + b_kow + "<br>");
+            document.write("c = " + c_kow + "<br>");
+        </script>
+    </div>
+</body>
+</html>

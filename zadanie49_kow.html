@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Michał Starkowicz - Zadanie 49</title>
+</head>
+<body>
+    <div style="color:red;font-size:32px;">
+        <script type="text/javascript">
+            var n_kow = parseInt(prompt("Podaj liczbę n (0-20):", ""));
+            var silnia_kow = 1;
+            if (n_kow === 0) {
+                silnia_kow = 1;
+            } else {
+                for (var i = 1; i <= n_kow; i++) {
+                    silnia_kow *= i;
+                }
+            }
+            document.write("n=" + n_kow + "<br>silnia=" + silnia_kow);
+        </script>
+    </div>
+</body>
+</html>

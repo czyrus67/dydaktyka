@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod źródłowy - Zadanie 47</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        pre { background: #f0f0f0; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Kod źródłowy zadania 47</h1>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Michał Starkowicz - Zadanie 47&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div style="color:red;font-size:32px;"&gt;
+        &lt;script type="text/javascript"&gt;
+            var a_kow, b_kow, c_kow;
+            do {
+                a_kow = parseFloat(prompt("Podaj długość boku a (&gt;0):", ""));
+                b_kow = parseFloat(prompt("Podaj długość boku b (&gt;0):", ""));
+                c_kow = parseFloat(prompt("Podaj długość boku c (&gt;0):", ""));
+            } while (
+                !(a_kow &gt; 0 &amp;&amp; b_kow &gt; 0 &amp;&amp; c_kow &gt; 0 &amp;&amp;
+                  a_kow + b_kow &gt; c_kow &amp;&amp;
+                  a_kow + c_kow &gt; b_kow &amp;&amp;
+                  b_kow + c_kow &gt; a_kow)
+            );
+            document.write("Podane boki tworzą trójkąt:&lt;br&gt;");
+            document.write("a = " + a_kow + "&lt;br&gt;");
+            document.write("b = " + b_kow + "&lt;br&gt;");
+            document.write("c = " + c_kow + "&lt;br&gt;");
+        &lt;/script&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+</body>
+</html>

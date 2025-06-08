@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Michał Starkowicz - Zadanie 46</title>
+</head>
+<body>
+    <div style="color:red;font-size:50px;">
+        <script type="text/javascript">
+            var h_kow = 0;
+            do {
+                var h_kow = prompt("Podaj wysokość trójkąta (większą od zera):", "");
+                h_kow = parseFloat(h_kow);
+            } while (h_kow <= 0);
+
+            var a_kow = 0;
+            do {
+                var a_kow = prompt("Podaj podstawę trójkąta (większą od zera):", "");
+                a_kow = parseFloat(a_kow);
+            } while (!(a_kow > 0));
+
+            var Pole = (a_kow * h_kow) / 2;
+            document.write("Pole=" + Pole.toFixed(2) + " cm^2" + "<br>");
+        </script>
+    </div>
+</body>
+</html>

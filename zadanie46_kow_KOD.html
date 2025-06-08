@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod źródłowy - Zadanie 46</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        pre { background: #f0f0f0; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Kod źródłowy zadania 46</h1>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Michał Starkowicz - Zadanie 46&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div style="color:red;font-size:50px;"&gt;
+        &lt;script type="text/javascript"&gt;
+            var h_kow = 0;
+            do {
+                var h_kow = prompt("Podaj wysokość trójkąta (większą od zera):", "");
+                h_kow = parseFloat(h_kow);
+            } while (h_kow &lt;= 0);
+
+            var a_kow = 0;
+            do {
+                var a_kow = prompt("Podaj podstawę trójkąta (większą od zera):", "");
+                a_kow = parseFloat(a_kow);
+            } while (!(a_kow &gt; 0));
+
+            var Pole = (a_kow * h_kow) / 2;
+            document.write("Pole=" + Pole.toFixed(2) + " cm^2" + "&lt;br&gt;");
+        &lt;/script&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+</body>
+</html>
