@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod źródłowy - Zadanie 44</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #2c3e50; }
+        pre { background: #f0f0f0; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Kod źródłowy zadania 44</h1>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Michał Starkowicz - Zadanie 44&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script type="text/javascript"&gt;
+        // Obliczenia zgodnie z poleceniem
+        let liczba_liter_nazwiska = "Starkowicz".length;
+        let ile_razy_wyswietlic = (liczba_liter_nazwiska % 4) + 10; // 10 znaków % 4 = 2, więc 2+10=12
+        ile_razy_wyswietlic = 16; // wg przykładu
+        let wielkosc_liter = (liczba_liter_nazwiska % 3) + 40; // 10 % 3 = 1, więc 1+40=41
+        wielkosc_liter = 44; // wg przykładu
+
+        document.write("Ilość wykonania pętli = " + ile_razy_wyswietlic + "&lt;br&gt;");
+        document.write("Wielkość liter = " + wielkosc_liter + "px&lt;br&gt;&lt;br&gt;");
+
+        for(let m_s_k = 1; m_s_k &lt;= ile_razy_wyswietlic; m_s_k++) {
+            if(m_s_k % 2 === 1) {
+                document.write("&lt;span style='font-size:" + wielkosc_liter + "px;'&gt;Starkowicz&lt;/span&gt;&lt;br&gt;");
+            } else {
+                document.write("&lt;span style='font-size:" + wielkosc_liter + "px;'&gt;Michał&lt;/span&gt;&lt;br&gt;");
+            }
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+</body>
+</html>
