@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod źródłowy - Zadanie 56</title>
+    <style>
+        pre { background: #f0f0f0; padding: 10px; border-radius: 5px; font-size: 15px; }
+    </style>
+</head>
+<body>
+    <h1>Kod źródłowy zadania 56</h1>
+    <pre>
+&lt;script type="text/javascript"&gt;
+    function czyPierwsza(n) {
+        if (n &lt; 2) return false;
+        for (var d = 2; d * d &lt;= n; d++) {
+            if (n % d === 0) return false;
+        }
+        return true;
+    }
+
+    var ile = 0;
+    var linia = 0;
+    for (var i = 0; ile &lt; 40; i++) {
+        var w = i * i + i + 41;
+        if (czyPierwsza(w)) {
+            document.write("i=" + i + "   w(" + i + ")=" + w + "&lt;br&gt;");
+            ile++;
+            linia++;
+            if (linia === 5) {
+                alert("Zatrzymanie po 5 liniach. Kliknij OK, by kontynuować.");
+                linia = 0;
+            }
+        }
+    }
+&lt;/script&gt;
+    </pre>
+</body>
+</html>

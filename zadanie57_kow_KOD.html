@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod źródłowy - Zadanie 57</title>
+    <style>
+        pre { background: #f0f0f0; padding: 10px; border-radius: 5px; font-size: 15px; }
+    </style>
+</head>
+<body>
+    <h1>Kod źródłowy zadania 57</h1>
+    <pre>
+&lt;script type="text/javascript"&gt;
+    var start = 27; // numer w dzienniku
+    var end = start + 15;
+
+    var linia = 0;
+    for (var i = start; i &lt;= end; i++) {
+        var pierw2 = Math.sqrt(i).toFixed(2);
+        var pierw4 = Math.sqrt(Math.sqrt(i)).toFixed(2);
+        document.write("i=" + i + "   pierw_2(" + i + ")=" + pierw2 + "   pierw_4(" + i + ")=" + pierw4 + "&lt;br&gt;");
+        linia++;
+        if (linia === 3) {
+            alert("Zatrzymanie po 3 liniach. Kliknij OK, by kontynuować.");
+            linia = 0;
+        }
+    }
+&lt;/script&gt;
+    </pre>
+</body>
+</html>

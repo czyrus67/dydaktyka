@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod źródłowy - Zadanie 52</title>
+    <style>
+        pre { background: #f0f0f0; padding: 10px; border-radius: 5px; font-size: 15px; }
+    </style>
+</head>
+<body>
+    <h1>Kod źródłowy zadania 52</h1>
+    <pre>
+&lt;script type="text/javascript"&gt;
+    // Dane osobowe
+    var nazwisko = "Starkowicz";
+    var imie = "Michał";
+
+    // Obliczanie a i b
+    var a_kow = ((nazwisko.length) % 4) + 5; // a = ((liczba_liter_nazwiska) mod 4) + 5
+    var b_kow = ((imie.length) % 6) + 20;    // b = ((liczba_liter_imienia) mod 6) + 20
+
+    // Górna linia gwiazdek
+    for (var i = 0; i &lt; b_kow; i++) {
+        document.write("*");
+    }
+    document.write("&lt;br&gt;");
+
+    // Środkowe linie z pionowymi gwiazdkami
+    for (var w = 0; w &lt; a_kow - 2; w++) {
+        document.write("*");
+        for (var j = 0; j &lt; b_kow - 2; j++) {
+            document.write("&nbsp;");
+        }
+        document.write("*&lt;br&gt;");
+    }
+
+    // Dolna linia gwiazdek
+    for (var i = 0; i &lt; b_kow; i++) {
+        document.write("*");
+    }
+    document.write("&lt;br&gt;&lt;br&gt;");
+    document.write("a = " + a_kow + "&lt;br&gt;");
+    document.write("b = " + b_kow + "&lt;br&gt;");
+&lt;/script&gt;
+    </pre>
+</body>
+</html>

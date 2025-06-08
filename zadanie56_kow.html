@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Michał Starkowicz - Zadanie 56</title>
+    <style>
+        pre { font-size: 18px; }
+    </style>
+</head>
+<body>
+    <pre>
+<script type="text/javascript">
+    function czyPierwsza(n) {
+        if (n < 2) return false;
+        for (var d = 2; d * d <= n; d++) {
+            if (n % d === 0) return false;
+        }
+        return true;
+    }
+
+    var ile = 0;
+    var linia = 0;
+    for (var i = 0; ile < 40; i++) {
+        var w = i * i + i + 41;
+        if (czyPierwsza(w)) {
+            document.write("i=" + i + "   w(" + i + ")=" + w + "<br>");
+            ile++;
+            linia++;
+            if (linia === 5) {
+                alert("Zatrzymanie po 5 liniach. Kliknij OK, by kontynuować.");
+                linia = 0;
+            }
+        }
+    }
+</script>
+    </pre>
+</body>
+</html>

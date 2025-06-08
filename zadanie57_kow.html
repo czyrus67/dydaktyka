@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Michał Starkowicz - Zadanie 57</title>
+    <style>
+        pre { font-size: 18px; }
+    </style>
+</head>
+<body>
+    <pre>
+<script type="text/javascript">
+    var start = 27; // numer w dzienniku
+    var end = start + 15;
+
+    var linia = 0;
+    for (var i = start; i <= end; i++) {
+        var pierw2 = Math.sqrt(i).toFixed(2);
+        var pierw4 = Math.sqrt(Math.sqrt(i)).toFixed(2);
+        document.write("i=" + i + "   pierw_2(" + i + ")=" + pierw2 + "   pierw_4(" + i + ")=" + pierw4 + "<br>");
+        linia++;
+        if (linia === 3) {
+            alert("Zatrzymanie po 3 liniach. Kliknij OK, by kontynuować.");
+            linia = 0;
+        }
+    }
+</script>
+    </pre>
+</body>
+</html>
